@@ -6,4 +6,4 @@ jobs:
      - ubuntu-latest
    steps:
      - name: my step
-       run: "hello world!"
+       run: echo "hello world!"
