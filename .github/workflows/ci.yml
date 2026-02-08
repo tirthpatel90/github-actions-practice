@@ -2,8 +2,7 @@ name: hello world
 on: push
 jobs:
   my-job:
-   runs-on:
-     - ubuntu-latest
+   runs-on: ubuntu-latest
    steps:
      - name: my step
        run: |
@@ -11,4 +10,6 @@ jobs:
          pwd
          ls -la
          exit 1
-   if: endsWith(0) == failure()
+     - if: failure()
+       run: echo "step is failed"
+   
