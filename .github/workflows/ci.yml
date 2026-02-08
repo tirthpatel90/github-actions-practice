@@ -6,4 +6,7 @@ jobs:
      - ubuntu-latest
    steps:
      - name: my step
-       run: echo "hello world!"
+       run: |
+         echo "hello world!"
+         pwd
+         ls -la
