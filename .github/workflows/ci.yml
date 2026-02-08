@@ -10,6 +10,7 @@ jobs:
          pwd
          ls -la
          exit 1
+       continue-on-error: true
      - if: failure()
        run: echo "step is failed"
    
