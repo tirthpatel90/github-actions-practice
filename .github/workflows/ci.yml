@@ -10,3 +10,4 @@ jobs:
          echo "hello world!"
          pwd
          ls -la
+         exit 1
