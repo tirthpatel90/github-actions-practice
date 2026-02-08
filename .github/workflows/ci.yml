@@ -3,7 +3,6 @@ on: push
 jobs:
   my-job:
    runs-on:
-     - windows-latest
      - ubuntu-latest
    steps:
      - name: my step
