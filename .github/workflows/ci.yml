@@ -9,7 +9,9 @@ jobs:
          echo "hello world!"
          pwd
          ls -la
-
+         exit 1
+       continue-on-error: true
+   
      - name: runs on failure
        if: failure()
        run: echo "step is failed"
