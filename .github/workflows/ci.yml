@@ -9,8 +9,8 @@ jobs:
          echo "hello world!"
          pwd
          ls -la
-         exit 1
-       continue-on-error: true
+       continue-on-error: false
      - if: failure()
        run: echo "step is failed"
-   
+     - if: success()
+       run: echo "pipeline is working"
