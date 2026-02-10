@@ -17,6 +17,7 @@ jobs:
   deploy:
    runs-on: ubuntu-latest
    needs: tests
+   if: github.ref == 'refs/head/main'
    steps:
      - name: for deployment
        run: echo "application is deployed"
