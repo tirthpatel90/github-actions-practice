@@ -1,20 +1,20 @@
-name: hello world 
+name: for multi jobs run 
 on: push
+
 jobs:
-  my-job:
+  builds:
    runs-on: ubuntu-latest
    steps:
-     - name: my step
-       run: |
-         echo "hello world!"
-         pwd
-         ls -la
-         exit 1
-       continue-on-error: true
-   
-     - name: runs on failure
-       if: failure()
-       run: echo "step is failed"
-     - name: runs on success
-       if: success()
-       run: echo "pipeline is working"
+     - name: for first ci build
+       run: echo "buldind first application using ci"
+
+  tests:
+   runs-on: ubuntu-latest
+   needs: builds
+   steps:
+     - name: for testing
+       run: echo "testing first build application"
+
+
+    
+  
