@@ -6,8 +6,9 @@ jobs:
    runs-on: ubuntu-latest
    steps:
      - name: for first ci build
-       run: echo "buldind first application using ci"
-       exit 1
+       run: |
+        echo "buldind first application using ci"
+        exit 1
 
   tests:
    runs-on: ubuntu-latest
