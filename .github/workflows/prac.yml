@@ -1,0 +1,25 @@
+name: parallel job
+on: push
+
+jobs:
+  build: 
+   runs-on: ubuntu-latest
+   steps:
+     - name: for build parallel pipeline
+       run: echo "run parallel build"
+
+  lint:
+    runs-on:  ubuntu-latest
+    steps:
+      - name: for lint code parallels 
+        run: echo "code lint parallel"
+
+
+  
+
+
+
+
+
+
+
