@@ -1,0 +1,12 @@
+name: matrix practice
+on: push
+
+jobs:
+  tests:
+   runs-on: ubuntu-latest
+   strategy:
+     matrix:
+       python-version: [3.8, 3.10]
+   steps:
+     - name: for check first matrix
+       run: echo "first matrix practice"
